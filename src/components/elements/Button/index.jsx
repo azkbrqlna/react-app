@@ -3,7 +3,7 @@ const Button = (props) => {
   const { text = "...", classname = "bg-black" } = props;
   return (
     <button
-      className={`${classname} hover:bg-blue-500 text-white px-2 py-1 rounded-md font-semibold`}
+      className={`${classname} hover:bg-blue-500 text-white p-2 rounded-md font-semibold`}
     >
       {text}
     </button>
