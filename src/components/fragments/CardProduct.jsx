@@ -4,7 +4,7 @@ import Button from "../elements/Button";
 const CardProduct = (props) => {
   const { children } = props;
   return (
-    <div className="w-full max-w-sm bg-white border border-gray-300 rounded-lg shadow-lg">
+    <div className="w-full max-w-sm bg-white border border-gray-300 rounded-lg shadow-lg flex-col justify-between">
       {children}
     </div>
   );
@@ -25,7 +25,7 @@ const Header = (props) => {
 const Body = (props) => {
   const { children, title } = props;
   return (
-    <div className="px-5 pb-5">
+    <div className="px-5 pb-5 min-h-[160px]">
       <a href="#">
         <h5 className="text-xl font-semibold tracking-tight text-gray-900">
           {title}
@@ -40,10 +40,12 @@ const Footer = (props) => {
   const { price } = props;
   return (
     <div className="flex items-center justify-between px-5 py-4 border-t border-gray-200">
-      <span className="text-lg font-semibold text-gray-900">{price}</span>
+      <span className="text-lg font-semibold text-gray-900 whitespace-nowrap">
+        {price}
+      </span>
       <Button
         text="Add to cart"
-        classname="bg-blue-600 text-white px-4 py-2 rounded"
+        classname="bg-blue-600 text-white px-4 py-2 rounded flex-shrink-0"
       />
     </div>
   );
